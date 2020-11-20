@@ -456,16 +456,17 @@ wand
 .wand{
     position: absolute;
     top: 90px;
-    right: -115px;
+    right: -114px;
     width: 13px;
     height: 500px;
-    background-color: #7D4C1C;
+    border: 2px solid black;
+    background-color: #f0a356;
 }
 .wand__hand {
     top: -155px;
     position: absolute;
     z-index: -1;
-    left: -62px;
+    left: -64px;
     width: 130px;
     height: 160px;
     display: flex;
