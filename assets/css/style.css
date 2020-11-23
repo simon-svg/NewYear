@@ -42,6 +42,7 @@
     -moz-transform: translate(-300px, 100px);
     -ms-transform: translate(-300px, 100px);
     -o-transform: translate(-300px, 100px);
+    z-index: 99;
 }
 .play{
     position: absolute;

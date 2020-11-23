@@ -37,9 +37,9 @@ play.addEventListener("click", () => {
 
         leftHand.style.animation = "handmove ease 2s infinite";
 
-        star.style.animation = "starAnimation ease 1s infinite";
-        starBefore.style.animation = "starBeforeAnimation ease 1s infinite";
-        starAfter.style.animation = "starAfterAnimation ease 1s infinite";
+        star.style.animation = "starAnimation linear 1s infinite";
+        starBefore.style.animation = "starBeforeAnimation linear 1s infinite";
+        starAfter.style.animation = "starAfterAnimation linear 1s infinite";
 
         redLights.forEach((item, i) => {
             item.style.animation = "circleAnimRed ease .5s infinite";
