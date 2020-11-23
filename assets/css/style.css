@@ -71,11 +71,17 @@ snow man
     left: -500px;
     top: -40px;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: center;
+    transition: top ease 1s;
+    -webkit-transition: top ease 1s;
+    -moz-transition: top ease 1s;
+    -ms-transition: top ease 1s;
+    -o-transition: top ease 1s;
 }
 .click-me,
-.click-me__bg{
+.click-me__bg,
+.click-me__present{
     width: 200px;
     height: 70px;
     background-color: transparent;
@@ -91,7 +97,8 @@ snow man
     outline: none;
     cursor: pointer;
 }
-.click-me__bg{
+.click-me__bg,
+.click-me__present{
     margin-bottom: 30px;
     width: 100px;
     height: 35px;
@@ -104,15 +111,27 @@ snow man
     -ms-transition: all ease .5s;
     -o-transition: all ease .5s;
 }
-.click-me__inside:hover .click-me__line{
-    height: 32px;
+.click-me__present{
+    margin: 30px 0 0 0;
+}
+.click-me__inside:hover .click-me__bg-line{
+    height: 30px;
     top: 35px;
+}
+.click-me__inside:hover .click-me__present-line{
+    height: 30px;
+    bottom: 35px;
 }
 .click-me__inside:hover .click-me__bg{
     opacity: 1;
     visibility: visible;
 }
-.click-me__line{
+.click-me__inside:hover .click-me__present{
+    opacity: 1;
+    visibility: visible;
+}
+.click-me__bg-line,
+.click-me__present-line{
     position: absolute;
     top: 66px;
     left: 50%;
@@ -130,6 +149,14 @@ snow man
     -ms-transition: all ease .5s;
     -o-transition: all ease .5s;
 }
+.click-me__present-line{
+    height: 0px;
+    bottom: 65px;
+    top: unset;
+}
+
+
+
 
 .snow-man{
     display: flex;
@@ -140,6 +167,11 @@ snow man
     -moz-transform: translateY(-15px);
     -ms-transform: translateY(-15px);
     -o-transform: translateY(-15px);
+    transition: transform ease 1s;
+    -webkit-transition: transform ease 1s;
+    -moz-transition: transform ease 1s;
+    -ms-transition: transform ease 1s;
+    -o-transition: transform ease 1s;
 }
 .snow-man__legs,
 .snow-man__stomach,
@@ -461,6 +493,11 @@ wand
     height: 500px;
     border: 2px solid black;
     background-color: #f0a356;
+    transition: transform ease 1s;
+    -webkit-transition: transform ease 1s;
+    -moz-transition: transform ease 1s;
+    -ms-transition: transform ease 1s;
+    -o-transition: transform ease 1s;
 }
 .wand__hand {
     top: -155px;
@@ -501,6 +538,11 @@ vedro sharf
     -ms-transform: rotate(180deg);
     -o-transform: rotate(180deg);
     z-index: -1;
+    transition: transform ease 1s;
+    -webkit-transition: transform ease 1s;
+    -moz-transition: transform ease 1s;
+    -ms-transition: transform ease 1s;
+    -o-transition: transform ease 1s;
 }
 .vedro__img,
 .sharf__img{
@@ -515,6 +557,11 @@ vedro sharf
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: transform ease 1s;
+    -webkit-transition: transform ease 1s;
+    -moz-transition: transform ease 1s;
+    -ms-transition: transform ease 1s;
+    -o-transition: transform ease 1s;
 }
 
 
@@ -875,10 +922,194 @@ presents
     height: 60px;
     left: 30px;
     background-color: blue;
+    transform: scale(1);
+    transition: transform ease 1s;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    -webkit-transition: transform ease 1s;
+    -moz-transition: transform ease 1s;
+    -ms-transition: transform ease 1s;
+    -o-transition: transform ease 1s;
 }
 .tree__present3_line,
 .tree__present3_top{
     background-color: red;
+}
+.tree__present3_blue-shard,
+.tree__present3_red-shard{
+    display: none;
+    background-color: blue;
+    width: 40px;
+    height: 10px;
+    position: absolute;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transform: translate(-500px, -100px);
+    -webkit-transform: translate(-500px, -100px);
+    -moz-transform: translate(-500px, -100px);
+    -ms-transform: translate(-500px, -100px);
+    -o-transform: translate(-500px, -100px);
+}
+.tree__present3_blue-shard{
+    animation: blueShard linear 2s;
+    -webkit-animation: blueShard linear 2s;
+    height: 30px;
+}
+.tree__present3_red-shard{
+    background-color: red;
+    animation: redShard linear 2s;
+    -webkit-animation: redShard linear 2s;
+}
+.dog{
+    position: absolute;
+    display: none;
+    bottom: 0;
+    width: 100px;
+    transform: translateX(-480px);
+    -webkit-transform: translateX(-480px);
+    -moz-transform: translateX(-480px);
+    -ms-transform: translateX(-480px);
+    -o-transform: translateX(-480px);
+}
+.dog__gif{
+    width: 100%;
+}
+
+
+@keyframes present3Animation{
+    0%{
+        transform: translateX(-350px) rotate(0deg);
+        -webkit-transform: translateX(-350px) rotate(0deg);
+        -moz-transform: translateX(-350px) rotate(0deg);
+        -ms-transform: translateX(-350px) rotate(0deg);
+        -o-transform: translateX(-350px) rotate(0deg);
+}
+    20%{
+        transform: translateX(-350px) rotate(20deg);
+        -webkit-transform: translateX(-350px) rotate(20deg);
+        -moz-transform: translateX(-350px) rotate(20deg);
+        -ms-transform: translateX(-350px) rotate(20deg);
+        -o-transform: translateX(-350px) rotate(20deg);
+}
+    40%{
+        transform: translateX(-350px) rotate(-20deg);
+        -webkit-transform: translateX(-350px) rotate(-20deg);
+        -moz-transform: translateX(-350px) rotate(-20deg);
+        -ms-transform: translateX(-350px) rotate(-20deg);
+        -o-transform: translateX(-350px) rotate(-20deg);
+}
+    60%{
+        transform: translateX(-350px) rotate(20deg);
+        -webkit-transform: translateX(-350px) rotate(20deg);
+        -moz-transform: translateX(-350px) rotate(20deg);
+        -ms-transform: translateX(-350px) rotate(20deg);
+        -o-transform: translateX(-350px) rotate(20deg);
+}
+    80%{
+        transform: translateX(-350px) rotate(-20deg);
+        -webkit-transform: translateX(-350px) rotate(-20deg);
+        -moz-transform: translateX(-350px) rotate(-20deg);
+        -ms-transform: translateX(-350px) rotate(-20deg);
+        -o-transform: translateX(-350px) rotate(-20deg);
+}
+    100%{
+        transform: translateX(-350px) rotate(0deg);
+        -webkit-transform: translateX(-350px) rotate(0deg);
+        -moz-transform: translateX(-350px) rotate(0deg);
+        -ms-transform: translateX(-350px) rotate(0deg);
+        -o-transform: translateX(-350px) rotate(0deg);
+}
+}
+
+@keyframes scaleAnimation{
+    0%{
+        transform: translate(-350px, 0px) scale(1);
+        -webkit-transform: translate(-350px, 0px) scale(1);
+        -moz-transform: translate(-350px, 0px) scale(1);
+        -ms-transform: translate(-350px, 0px) scale(1);
+        -o-transform: translate(-350px, 0px) scale(1);
+}
+    50%{
+        transform: translate(-350px, -35px) scale(2);
+        -webkit-transform: translate(-350px, -35px) scale(2);
+        -moz-transform: translate(-350px, -35px) scale(2);
+        -ms-transform: translate(-350px, -35px) scale(2);
+        -o-transform: translate(-350px, -35px) scale(2);
+}
+    100%{
+        transform: translate(-350px, -70px) scale(3);
+        -webkit-transform: translate(-350px, -70px) scale(3);
+        -moz-transform: translate(-350px, -70px) scale(3);
+        -ms-transform: translate(-350px, -70px) scale(3);
+        -o-transform: translate(-350px, -70px) scale(3);
+    }
+}
+
+@keyframes redShard{
+    0%{
+        transform: translate(-500px, -100px) rotate(0deg);
+        -webkit-transform: translate(-500px, -100px) rotate(0deg);
+        -moz-transform: translate(-500px, -100px) rotate(0deg);
+        -ms-transform: translate(-500px, -100px) rotate(0deg);
+        -o-transform: translate(-500px, -100px) rotate(0deg);
+}
+    33.3%{
+        transform: translate(-290px, -420px) rotate(190deg);
+        -webkit-transform: translate(-290px, -420px) rotate(190deg);
+        -moz-transform: translate(-290px, -420px) rotate(190deg);
+        -ms-transform: translate(-290px, -420px) rotate(190deg);
+        -o-transform: translate(-290px, -420px) rotate(190deg);
+}
+    66.6%{
+        transform: translate(-190px, -550px) rotate(380deg);
+        -webkit-transform: translate(-190px, -550px) rotate(380deg);
+        -moz-transform: translate(-190px, -550px) rotate(380deg);
+        -ms-transform: translate(-190px, -550px) rotate(380deg);
+        -o-transform: translate(-190px, -550px) rotate(380deg);
+}
+100%{
+    transform: translate(-60px, -450px) rotate(600deg);
+    -webkit-transform: translate(-60px, -450px) rotate(600deg);
+    -moz-transform: translate(-60px, -450px) rotate(600deg);
+    -ms-transform: translate(-60px, -450px) rotate(600deg);
+    -o-transform: translate(-60px, -450px) rotate(600deg);
+}
+}
+
+@keyframes blueShard{
+    0%{
+        transform: translate(-500px, -100px) rotate(0deg);
+        -webkit-transform: translate(-500px, -100px) rotate(0deg);
+        -moz-transform: translate(-500px, -100px) rotate(0deg);
+        -ms-transform: translate(-500px, -100px) rotate(0deg);
+        -o-transform: translate(-500px, -100px) rotate(0deg);
+}
+    33.3%{
+        transform: translate(-610px, -370px) rotate(180deg);
+        -webkit-transform: translate(-610px, -370px) rotate(180deg);
+        -moz-transform: translate(-610px, -370px) rotate(180deg);
+        -ms-transform: translate(-610px, -370px) rotate(180deg);
+        -o-transform: translate(-610px, -370px) rotate(180deg);
+}
+    66.6%{
+        transform: translate(-800px, -700px) rotate(360deg);
+        -webkit-transform: translate(-800px, -700px) rotate(360deg);
+        -moz-transform: translate(-800px, -700px) rotate(360deg);
+        -ms-transform: translate(-800px, -700px) rotate(360deg);
+        -o-transform: translate(-800px, -700px) rotate(360deg);
+}
+100%{
+    transform: translate(-910px, -666px) rotate(540deg);
+    -webkit-transform: translate(-910px, -666px) rotate(540deg);
+    -moz-transform: translate(-910px, -666px) rotate(540deg);
+    -ms-transform: translate(-910px, -666px) rotate(540deg);
+    -o-transform: translate(-910px, -666px) rotate(540deg);
+}
 }
 
 /* 

@@ -26,7 +26,7 @@ changeBg.addEventListener("click", () => {
     })
     app[bgCount].style.opacity = "1";
     bgCount++;
-    if(bgCount === 3){
+    if (bgCount === 3) {
         bgCount = 0;
     }
 })
@@ -93,7 +93,6 @@ let greenIndex = 2;
 let blueIndex = 3;
 let yellowIndex = 4;
 
-
 redLights.forEach((item, i) => {
     item.setAttribute("x", `${redIndex}vw`);
     greenLights[i].setAttribute("x", `${greenIndex}vw`);
@@ -104,4 +103,50 @@ redLights.forEach((item, i) => {
     greenIndex += 4
     blueIndex += 4
     yellowIndex += 4
+})
+
+
+
+
+
+// click me present
+const clickMePresent = document.querySelector(".click-me__present");
+const clickMeInside = document.querySelector(".click-me__inside");
+const snowMan = document.querySelector(".snow-man");
+const vedro = document.querySelector(".vedro");
+const sharf = document.querySelector(".sharf");
+const wand = document.querySelector(".wand");
+const present3 = document.querySelector(".tree__present3");
+const blueShard = document.querySelector(".tree__present3_blue-shard");
+const redShard = document.querySelector(".tree__present3_red-shard");
+const dog = document.querySelector(".dog");
+
+clickMePresent.addEventListener("click", () => {
+    clickMeInside.style.top = "-215px";
+    setTimeout(() => {
+        snowMan.style.transform = "translate(-350px, -15px)";
+        vedro.style.transform = "translateX(-350px) rotate(180deg)";
+        sharf.style.transform = "translateX(-350px)";
+        wand.style.transform = "translateX(-350px)";
+        setTimeout(() => {
+            present3.style.transform = "translateX(-350px)";
+            present3.style.transform = "translateX(-350px)";
+            setTimeout(() => {
+                present3.style.animation = "present3Animation ease 2s";
+                setTimeout(() => {
+                    present3.style.animation = "scaleAnimation linear 2s";
+                    setTimeout(() => {
+                        present3.style.display = "none";
+                        blueShard.style.display = "block";
+                        redShard.style.display = "block";
+                        dog.style.display = "block";
+                        setTimeout(() => {
+                            blueShard.style.transform = "translate(-920px, -666px) rotate(540deg)";
+                            redShard.style.transform = "translate(-60px, -460px) rotate(600deg)";
+                        })
+                    }, 2000)
+                })
+            }, 1000)
+        }, 1000)
+    }, 1000)
 })
