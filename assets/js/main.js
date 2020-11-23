@@ -14,8 +14,8 @@ const branchYellow = document.querySelectorAll(".branch-yellow");
 
 const audio = document.querySelector(".audio");
 const star = document.querySelector(".tree__star");
-const starBefore = document.querySelector(".tree__starB")
-const starAfter = document.querySelector(".tree__starA")
+const starBefore = document.querySelector(".tree__starB");
+const starAfter = document.querySelector(".tree__starA");
 
 const app = document.querySelectorAll(".appBg");
 const changeBg = document.querySelector(".click-me__bg");
@@ -62,7 +62,7 @@ play.addEventListener("click", () => {
         })
     }
     else {
-        location.reload()
+        location.reload();
     }
     playBool = !playBool;
 })
@@ -89,20 +89,20 @@ pathLights2.setAttribute("d", `M${vv50} 0 Q ${vv75} 200 ${vv100} 0`);
 
 // lights
 let redIndex = 1;
-let greenIndex = 2;
-let blueIndex = 3;
-let yellowIndex = 4;
+let greenIndex = 20;
+let blueIndex = 40;
+let yellowIndex = 60;
 
 redLights.forEach((item, i) => {
-    item.setAttribute("x", `${redIndex}vw`);
-    greenLights[i].setAttribute("x", `${greenIndex}vw`);
-    blueLights[i].setAttribute("x", `${blueIndex}vw`)
-    yellowLights[i].setAttribute("x", `${yellowIndex}vw`)
+    item.setAttribute("x", `${redIndex}`);
+    greenLights[i].setAttribute("x", `${greenIndex}`);
+    blueLights[i].setAttribute("x", `${blueIndex}`);
+    yellowLights[i].setAttribute("x", `${yellowIndex}`);
 
-    redIndex += 4
-    greenIndex += 4
-    blueIndex += 4
-    yellowIndex += 4
+    redIndex += 77;
+    greenIndex += 77;
+    blueIndex += 77;
+    yellowIndex += 77;
 })
 
 
