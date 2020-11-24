@@ -130,7 +130,6 @@ clickMePresent.addEventListener("click", () => {
         wand.style.transform = "translateX(-350px)";
         setTimeout(() => {
             present3.style.transform = "translateX(-350px)";
-            present3.style.transform = "translateX(-350px)";
             setTimeout(() => {
                 present3.style.animation = "present3Animation ease 2s";
                 setTimeout(() => {
@@ -145,8 +144,93 @@ clickMePresent.addEventListener("click", () => {
                             redShard.style.transform = "translate(-60px, -460px) rotate(600deg)";
                         })
                     }, 2000)
-                })
+                }, 2000)
             }, 1000)
         }, 1000)
     }, 1000)
+})
+
+
+
+
+
+// click me congratulation
+const Congratulation = document.querySelector(".click-me__congratulation");
+const present1 = document.querySelector(".tree__present1");
+const present1Inside = document.querySelector(".tree__present1_inside");
+const present1Later1 = document.querySelectorAll(".tree__present1_later")[0];
+const present1Later2 = document.querySelectorAll(".tree__present1_later")[1];
+const present1Later3 = document.querySelectorAll(".tree__present1_later")[2];
+const present1Later4 = document.querySelectorAll(".tree__present1_later")[3];
+const present1Later5 = document.querySelectorAll(".tree__present1_later")[4];
+const present1Later6 = document.querySelectorAll(".tree__present1_later")[5];
+const present1Later7 = document.querySelectorAll(".tree__present1_later")[6];
+const present1Later8 = document.querySelectorAll(".tree__present1_later")[7];
+const present1Later9 = document.querySelectorAll(".tree__present1_later")[8];
+const present1Later10 = document.querySelectorAll(".tree__present1_later")[9];
+const present1Later11 = document.querySelectorAll(".tree__present1_later")[10];
+const present1Later12 = document.querySelectorAll(".tree__present1_later")[11];
+
+let laterRotate = -60;
+
+Congratulation.addEventListener("click", () => {
+    clickMeInside.style.top = "-215px";
+    setTimeout(() => {
+        snowMan.style.transform = "translate(-350px, -15px)";
+        vedro.style.transform = "translateX(-350px) rotate(180deg)";
+        sharf.style.transform = "translateX(-350px)";
+        wand.style.transform = "translateX(-350px)";
+        setTimeout(() => {
+            present1.style.transform = "translateX(-430px)";
+            setTimeout(() => {
+                present1.style.animation = "present1Animation ease 2s";
+                setTimeout(() => {
+                    present1.style.animation = "present1ScaleAnimation linear 2s";
+                    setTimeout(() => {
+                        present1.style.display = "none";
+                        present1Inside.style.display = "flex";
+                        setTimeout(() => {
+                            present1Inside.style.transform = "translate(-720px, -700px) scale(1)";
+                            setTimeout(() => {
+                                present1Later1.style.transform = "translate(13px, 116px) rotate(-60deg)";
+                                present1Later2.style.transform = "translateY(73px) rotate(-50deg)";
+                                present1Later3.style.transform = "translateY(46px) rotate(-40deg)";
+                                present1Later4.style.transform = "translateY(30px) rotate(-30deg)";
+                                present1Later5.style.transform = "translateY(16px) rotate(-20deg)";
+                                present1Later6.style.transform = "translateY(0px) rotate(-10deg)";
+                                present1Later7.style.transform = "translateY(0px) rotate(10deg)";
+                                present1Later8.style.transform = "translateY(10px) rotate(20deg)";
+                                present1Later9.style.transform = "translateY(40px) rotate(30deg)";
+                                present1Later10.style.transform = "translateY(60px) rotate(40deg)";
+                                present1Later11.style.transform = "translateY(89px) rotate(50deg)";
+                                present1Later12.style.transform = "translate(-12px, 122px) rotate(60deg)";
+                                setTimeout(() => {
+                                    document.querySelector(".tree__present1_button").style = "opacity: 1; visibility: visible;"
+                                }, 1000)
+                            }, 2000)
+                        }, 50)
+                    }, 2000)
+                }, 2000)
+            }, 1000)
+        }, 1000)
+    }, 1000)
+})
+
+
+
+// tree present1 button click me
+const present1Button = document.querySelector(".tree__present1_button");
+present1Button.addEventListener("click", () => {
+    present1Later1.style.transform = "translate(-100px, 40px) rotate(-700deg)";
+    present1Later2.style.transform = "translate(-169px, 295px) rotate(60deg)";
+    present1Later3.style.transform = "translate(100px, 91px) rotate(-80deg)";
+    present1Later4.style.transform = "translate(567px, 100px) rotate(-390deg)";
+    present1Later5.style.transform = "translate(210px, -152px) rotate(180deg)";
+    present1Later6.style.transform = "translate(90px, 100px) rotate(60deg)";
+    present1Later7.style.transform = "translate(-780px, -43px) rotate(470deg)";
+    present1Later8.style.transform = "translate(286px, 550px) rotate(510deg)";
+    present1Later9.style.transform = "translate(383px, 62px) rotate(540deg)";
+    present1Later10.style.transform = "translate(270px, 310px) rotate(730deg)";
+    present1Later11.style.transform = "translate(-590px, -108px) rotate(606deg)";
+    present1Later12.style.transform = "translate(-790px, 66px) rotate(590deg)";
 })

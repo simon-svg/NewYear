@@ -82,7 +82,8 @@ snow man
 }
 .click-me,
 .click-me__bg,
-.click-me__present{
+.click-me__present,
+.click-me__congratulation{
     width: 200px;
     height: 70px;
     background-color: transparent;
@@ -99,7 +100,8 @@ snow man
     cursor: pointer;
 }
 .click-me__bg,
-.click-me__present{
+.click-me__present,
+.click-me__congratulation{
     margin-bottom: 30px;
     width: 100px;
     height: 35px;
@@ -119,20 +121,37 @@ snow man
     height: 30px;
     top: 35px;
 }
-.click-me__inside:hover .click-me__present-line{
-    height: 30px;
-    bottom: 35px;
-}
 .click-me__inside:hover .click-me__bg{
     opacity: 1;
     visibility: visible;
 }
+
+
 .click-me__inside:hover .click-me__present{
     opacity: 1;
     visibility: visible;
 }
+.click-me__inside:hover .click-me__present-line{
+    height: 30px;
+    bottom: 35px;
+}
+
+
+.click-me__inside:hover .click-me__congratulation-line{
+    width: 30px;
+    transform: translate(30px, -50%);
+    -webkit-transform: translate(30px, -50%);
+    -moz-transform: translate(30px, -50%);
+    -ms-transform: translate(30px, -50%);
+    -o-transform: translate(30px, -50%);
+}
+.click-me__inside:hover .click-me__congratulation{
+    opacity: 1;
+    visibility: visible;
+}
 .click-me__bg-line,
-.click-me__present-line{
+.click-me__present-line,
+.click-me__congratulation-line{
     position: absolute;
     top: 66px;
     left: 50%;
@@ -154,6 +173,39 @@ snow man
     height: 0px;
     bottom: 65px;
     top: unset;
+}
+
+.click-me__congratulation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(160px, -50%);
+    -webkit-transform: translate(160px, -50%);
+    -moz-transform: translate(160px, -50%);
+    -ms-transform: translate(160px, -50%);
+    -o-transform: translate(160px, -50%);
+}
+.click-me__congratulation-line{
+    width: 0px;
+    height: 2px;
+    top: unset;
+    left: unset;
+    right: 0;
+    top: 50%;
+    transform: translate(0px, -50%);
+    -webkit-transform: translate(0px, -50%);
+    -moz-transform: translate(0px, -50%);
+    -ms-transform: translate(0px, -50%);
+    -o-transform: translate(0px, -50%);
+    transition: all ease .5s;
+    -webkit-transition: all ease .5s;
+    -moz-transition: all ease .5s;
+    -ms-transition: all ease .5s;
+    -o-transition: all ease .5s;
 }
 
 
@@ -861,6 +913,11 @@ presents
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
+    transition: transform ease 1s;
+    -webkit-transition: transform ease 1s;
+    -moz-transition: transform ease 1s;
+    -ms-transition: transform ease 1s;
+    -o-transition: transform ease 1s;
 }
 .tree__present1_line{
     position: absolute;
@@ -907,6 +964,60 @@ presents
 .tree__present1_top2{
     left: 50%;
 }
+.tree__present1_inside{
+    display: none;
+    flex-wrap: nowrap;
+    position: absolute;
+    transform: translate(-720px, -100px) scale(0.3);
+    -webkit-transform: translate(-720px, -100px) scale(0.3);
+    -moz-transform: translate(-720px, -100px) scale(0.3);
+    -ms-transform: translate(-720px, -100px) scale(0.3);
+    -o-transform: translate(-720px, -100px) scale(0.3);
+    transition: transform ease 2s;
+    -webkit-transition: transform ease 2s;
+    -moz-transition: transform ease 2s;
+    -ms-transition: transform ease 2s;
+    -o-transition: transform ease 2s;
+}
+.tree__present1_later{
+    color: white;
+    font-size: 50px;
+    transition: transform ease 1s;
+    -webkit-transition: transform ease 1s;
+    -moz-transition: transform ease 1s;
+    -ms-transition: transform ease 1s;
+    -o-transition: transform ease 1s;
+}
+.first-later{
+    margin-left: 20px;
+}
+.tree__present1_button{
+    background-color: transparent;
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    font-size: 24px;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    cursor: pointer;
+    transition: all ease .5s;
+    -webkit-transition: all ease .5s;
+    -moz-transition: all ease .5s;
+    -ms-transition: all ease .5s;
+    -o-transition: all ease .5s;
+}
+
+
+
 
 .tree__present2{
     background-color: green;
@@ -924,15 +1035,10 @@ presents
     left: 30px;
     background-color: blue;
     transform: scale(1);
-    transition: transform ease 1s;
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     -ms-transform: scale(1);
     -o-transform: scale(1);
-    -webkit-transition: transform ease 1s;
-    -moz-transition: transform ease 1s;
-    -ms-transition: transform ease 1s;
-    -o-transition: transform ease 1s;
 }
 .tree__present3_line,
 .tree__present3_top{
@@ -982,6 +1088,12 @@ presents
 }
 
 
+
+
+
+/* 
+present blue all animation 
+*/
 @keyframes present3Animation{
     0%{
         transform: translateX(-350px) rotate(0deg);
@@ -1112,6 +1224,83 @@ presents
     -o-transform: translate(-910px, -666px) rotate(540deg);
 }
 }
+
+
+
+
+
+/* 
+present yellow all animation  
+*/
+
+@keyframes present1Animation{
+    0%{
+        transform: translateX(-430px) rotate(0deg);
+        -webkit-transform: translateX(-430px) rotate(0deg);
+        -moz-transform: translateX(-430px) rotate(0deg);
+        -ms-transform: translateX(-430px) rotate(0deg);
+        -o-transform: translateX(-430px) rotate(0deg);
+}
+    20%{
+        transform: translateX(-430px) rotate(20deg);
+        -webkit-transform: translateX(-430px) rotate(20deg);
+        -moz-transform: translateX(-430px) rotate(20deg);
+        -ms-transform: translateX(-430px) rotate(20deg);
+        -o-transform: translateX(-430px) rotate(20deg);
+}
+    40%{
+        transform: translateX(-430px) rotate(-20deg);
+        -webkit-transform: translateX(-430px) rotate(-20deg);
+        -moz-transform: translateX(-430px) rotate(-20deg);
+        -ms-transform: translateX(-430px) rotate(-20deg);
+        -o-transform: translateX(-430px) rotate(-20deg);
+}
+    60%{
+        transform: translateX(-430px) rotate(20deg);
+        -webkit-transform: translateX(-430px) rotate(20deg);
+        -moz-transform: translateX(-430px) rotate(20deg);
+        -ms-transform: translateX(-430px) rotate(20deg);
+        -o-transform: translateX(-430px) rotate(20deg);
+}
+    80%{
+        transform: translateX(-430px) rotate(-20deg);
+        -webkit-transform: translateX(-430px) rotate(-20deg);
+        -moz-transform: translateX(-430px) rotate(-20deg);
+        -ms-transform: translateX(-430px) rotate(-20deg);
+        -o-transform: translateX(-430px) rotate(-20deg);
+}
+    100%{
+        transform: translateX(-430px) rotate(0deg);
+        -webkit-transform: translateX(-430px) rotate(0deg);
+        -moz-transform: translateX(-430px) rotate(0deg);
+        -ms-transform: translateX(-430px) rotate(0deg);
+        -o-transform: translateX(-430px) rotate(0deg);
+}
+}
+@keyframes present1ScaleAnimation{
+    0%{
+        transform: translate(-430px, 0px) scale(1);
+        -webkit-transform: translate(-430px, 0px) scale(1);
+        -moz-transform: translate(-430px, 0px) scale(1);
+        -ms-transform: translate(-430px, 0px) scale(1);
+        -o-transform: translate(-430px, 0px) scale(1);
+}
+    50%{
+        transform: translate(-430px, -35px) scale(2);
+        -webkit-transform: translate(-430px, -35px) scale(2);
+        -moz-transform: translate(-430px, -35px) scale(2);
+        -ms-transform: translate(-430px, -35px) scale(2);
+        -o-transform: translate(-430px, -35px) scale(2);
+}
+    100%{
+        transform: translate(-430px, -70px) scale(3);
+        -webkit-transform: translate(-430px, -70px) scale(3);
+        -moz-transform: translate(-430px, -70px) scale(3);
+        -ms-transform: translate(-430px, -70px) scale(3);
+        -o-transform: translate(-430px, -70px) scale(3);
+}
+}
+
 
 /* 
 svg 
