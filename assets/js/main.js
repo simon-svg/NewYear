@@ -220,17 +220,36 @@ Congratulation.addEventListener("click", () => {
 
 // tree present1 button click me
 const present1Button = document.querySelector(".tree__present1_button");
+let present1ButtonBool = true;
+
 present1Button.addEventListener("click", () => {
-    present1Later1.style.transform = "translate(-100px, 40px) rotate(-700deg)";
-    present1Later2.style.transform = "translate(-169px, 295px) rotate(60deg)";
-    present1Later3.style.transform = "translate(100px, 91px) rotate(-80deg)";
-    present1Later4.style.transform = "translate(567px, 100px) rotate(-390deg)";
-    present1Later5.style.transform = "translate(210px, -152px) rotate(180deg)";
-    present1Later6.style.transform = "translate(90px, 100px) rotate(60deg)";
-    present1Later7.style.transform = "translate(-780px, -43px) rotate(470deg)";
-    present1Later8.style.transform = "translate(286px, 550px) rotate(510deg)";
-    present1Later9.style.transform = "translate(383px, 62px) rotate(540deg)";
-    present1Later10.style.transform = "translate(270px, 310px) rotate(730deg)";
-    present1Later11.style.transform = "translate(-590px, -108px) rotate(606deg)";
-    present1Later12.style.transform = "translate(-790px, 66px) rotate(590deg)";
+    if (present1ButtonBool) {
+        present1Later1.style.transform = "translate(-100px, 40px) rotate(-700deg)";
+        present1Later2.style.transform = "translate(-169px, 295px) rotate(60deg)";
+        present1Later3.style.transform = "translate(100px, 91px) rotate(-80deg)";
+        present1Later4.style.transform = "translate(572px, 100px) rotate(-390deg)";
+        present1Later5.style.transform = "translate(210px, -152px) rotate(180deg)";
+        present1Later6.style.transform = "translate(90px, 100px) rotate(60deg)";
+        present1Later7.style.transform = "translate(-780px, -43px) rotate(470deg)";
+        present1Later8.style.transform = "translate(286px, 550px) rotate(510deg)";
+        present1Later9.style.transform = "translate(383px, 62px) rotate(540deg)";
+        present1Later10.style.transform = "translate(270px, 310px) rotate(730deg)";
+        present1Later11.style.transform = "translate(-590px, -108px) rotate(606deg)";
+        present1Later12.style.transform = "translate(-790px, 66px) rotate(590deg)";
+    }
+    else {
+        present1Later1.style.transform = "translate(13px, 116px) rotate(-60deg)";
+        present1Later2.style.transform = "translateY(73px) rotate(-50deg)";
+        present1Later3.style.transform = "translateY(46px) rotate(-40deg)";
+        present1Later4.style.transform = "translateY(30px) rotate(-30deg)";
+        present1Later5.style.transform = "translateY(16px) rotate(-20deg)";
+        present1Later6.style.transform = "translateY(0px) rotate(-10deg)";
+        present1Later7.style.transform = "translateY(0px) rotate(10deg)";
+        present1Later8.style.transform = "translateY(10px) rotate(20deg)";
+        present1Later9.style.transform = "translateY(40px) rotate(30deg)";
+        present1Later10.style.transform = "translateY(60px) rotate(40deg)";
+        present1Later11.style.transform = "translateY(89px) rotate(50deg)";
+        present1Later12.style.transform = "translate(-12px, 122px) rotate(60deg)";  
+    }
+    present1ButtonBool = !present1ButtonBool;
 })
